@@ -1,0 +1,27 @@
+{{#if extended_from}}
+<tr class="property{{#if deprecated}} deprecated{{/if}} {{#if extended_from}} inherited{{/if}}">
+  <td>
+    <strong>
+      <a href="{{crossLinkRaw extended_from}}#property_{{name}}">{{name}}</a> {{#if required}}<br/><span class="required"></span>{{/if}}
+      {{#if static}}
+        <span class="fa fa-bolt" title="static"></span>
+      {{/if}}
+      {{#if deprecated}}
+        <span class="fa fa-exclamation-circle" title="deprecated"></span>
+      {{/if}}
+    </strong>
+  </td>
+
+  <td>
+    {{{default}}}
+  </td>
+
+  <td>
+    <em>{{#crossLink type}}{{/crossLink}}</em>
+  </td>
+
+  <td>
+    {{{description}}}
+  </td>
+</tr>
+{{/if}}
