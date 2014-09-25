@@ -28,7 +28,7 @@
     {{/if}}
 
     <div class="extends">
-      <span class="fa fa-expand"></span> {{{extends}}}
+      <span class="fa fa-expand"></span> {{#crossLink extends}}{{/crossLink}}
     </div>
 
     {{#if foundAt}}
@@ -160,7 +160,7 @@
   {{#if events}}
     <div class="events col dw100">
       <div class="boxed">
-        <h2>Events <span class="count">{{events.length}}</span></h2>
+        <h2>Events</h2>
 
         <div class="boxedContent">
         {{#events}}
@@ -172,7 +172,7 @@
   {{#if extends}}
     <div class="events col dw100">
       <div class="boxed">
-        <h2>Inherited Events <span class="count">{{events.length}}</span></h2>
+        <h2>Inherited Events</h2>
 
         <div class="boxedContent">
         {{#events}}
@@ -187,7 +187,7 @@
   {{#if methods}}
     <div class="methods col dw100">
       <div class="boxed">
-        <h2>Methods <span class="count">{{methods.length}}</span></h2>
+        <h2>Methods</h2>
 
         <div class="boxedContent">
         {{#methods}}
@@ -199,7 +199,7 @@
   {{#if extends}}
     <div class="methods col dw100">
       <div class="boxed">
-        <h2>Inherited Methods <span class="count">{{methods.length}}</span></h2>
+        <h2>Inherited Methods</h2>
 
         <div class="boxedContent">
         {{#methods}}
