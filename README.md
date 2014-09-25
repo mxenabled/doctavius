@@ -1,20 +1,20 @@
 Doctavius
 ==================
-###### A theme used as a submodule for Yuidocs
+###### A Yuidocs theme meant to be used as a submodule
 
 ### Cloning a repo with a submodule
 - After cloning a repo with doctavius as a submodule, you will notice the includes/doctavius folder is locally empty.
-- This will update the submodule 'doctavius' to the most recent commit, init if it hasn't already, and put it in the folder includes/doctavius
+- This will update the submodule in 'includes/doctavius' to the most recent commit, init if it hasn't already
 ```
-$ git submodule update --name doctavius --init includes/doctavius
+$ git submodule update --init includes/doctavius
 ```
 
 ### Adding Doctavius to a repo
-1. Call git submodule add for a url, put it in a folder called includes/doctavius and name it doctavius
+- Call git submodule add for a url, put it in a folder called includes/doctavius and name it doctavius
 ```
 $ git submodule add https://github.com/moneydesktop/doctavius.git includes/doctavius --name doctavius
 ```
-2. If this is your first submodule, you will see a new .gitmodules file and a new file at the path for where doctavius will live
+- If this is your first submodule, you will see a new .gitmodules file and a new file at the path for where doctavius will live
 ```
 $ git status
 # On branch master
