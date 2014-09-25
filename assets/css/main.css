@@ -142,6 +142,10 @@ table {
   margin-left: 70px;
   transition: all .2s linear .4s;
 }
+.danger {
+  text-transform: uppercase;
+  color: #E95454;
+}
 
 /* COLUMNS */
 .row:after {
