@@ -4,4 +4,9 @@ YUI().use('handlebars', function (Y) {
   Y.Handlebars.registerHelper('log', function (logThis) {
     return console.log(logThis);
   });
+  Y.Handlebars.registerHelper('backbone', function (name, attribute) {
+    var url = ["//backbonejs.org/#", name].join('');
+    !attribute || url += ["-", attribute].join('');
+    return '<a href="'+url+'" target="_blank">Backbone.'+name+'</a>'
+  });
 });
