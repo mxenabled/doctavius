@@ -1,18 +1,18 @@
 {{#unless extended_from}}
 <tr class="property{{#if deprecated}} deprecated{{/if}}">
   <td>
-    <strong>
-      {{#if overwritten_from}}
-        <a href="{{crossLinkRaw overwritten_from.class}}#property_{{name}}">{{name}}</a> {{#if required}}<br/><span class="required"></span>{{/if}}
-      {{else}}
-        {{name}} {{#if required}}<br/><span class="required"></span>{{/if}}
-      {{/if}}
-    </strong>
+    <strong>{{name}}</strong>
+    {{#if overwritten_from}}
+    <a href="{{crossLinkRaw overwritten_from.class}}#property_{{name}}">({{overwritten_from.class}})</a>
+    {{/if}}
+    {{#if required}}<br/>
+    <span class="required"></span>
+    {{/if}}
     {{#if static}}
-      <span class="fa fa-bolt" title="static"></span>
+    <span class="fa fa-bolt" title="static"></span>
     {{/if}}
     {{#if deprecated}}
-      <span class="fa fa-exclamation-circle" title="deprecated"></span>
+    <span class="fa fa-exclamation-circle" title="deprecated"></span>
     {{/if}}
   </td>
 

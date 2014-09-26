@@ -87,127 +87,86 @@
             {{#properties}} 
               {{>props}}
             {{/properties}}
+            {{#if extends}}
+              <tr class="inheritedHeader"><td>Inherited</td> <td></td> <td></td> <td></td></tr>
+              {{#attrs}}
+                {{>inheritedProps}}
+              {{/attrs}}
+            {{/if}}
           </tbody>
         </table>
       </div>
     </div>  
-  {{#if extends}}
-    <div class="properties col dw100">
-      <div class="boxed">
-        <h2>Inherited Options</h2>
-
-        <table>
-          <thead>
-            <th>Name</th>
-            <th>Default</th>
-            <th>Type</th>
-            <th>Description</th>
-          </thead>
-          <tbody>
-            {{#properties}} 
-              {{>inheritedProps}}
-            {{/properties}}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  {{/if}}
   {{/if}}
 
   {{#if attrs}}
-    <div class="attrs col dw100">
-      <div class="boxed">
-        <h2>Attributes</h2>
+  <div class="attrs col dw100">
+    <div class="boxed">
+      <h2>Attributes</h2>
 
-        <table>
-          <thead>
-            <th>Name</th>
-            <th>Default</th>
-            <th>Type</th>
-            <th>Description</th>
-          </thead>
-          <tbody>
-            {{#attrs}}
-              {{>attrs}}
-            {{/attrs}}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  {{#if extends}}
-    <div class="attrs col dw100">
-      <div class="boxed">
-        <h2>Inherited Attributes</h2>
-
-        <table>
-          <thead>
-            <th>Name</th>
-            <th>Default</th>
-            <th>Type</th>
-            <th>Description</th>
-          </thead>
-          <tbody>
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Default</th>
+          <th>Type</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          {{#attrs}}
+            {{>attrs}}
+          {{/attrs}}
+          {{#if extends}}
+            <tr class="inheritedHeader"><td>Inherited</td> <td></td> <td></td> <td></td></tr>
             {{#attrs}}
               {{>inheritedAttrs}}
             {{/attrs}}
-          </tbody>
-        </table>
-      </div>
+          {{/if}}
+        </tbody>
+      </table>
     </div>
+  </div>
   {{/if}}
-  {{/if}}
-
   {{#if events}}
-    <div class="events col dw100">
-      <div class="boxed">
-        <h2>Events</h2>
+  <div class="events col dw100">
+    <div class="boxed">
+      <h2>Events</h2>
 
-        <div class="boxedContent">
-        {{#events}}
-          {{>events}}
-        {{/events}}
-        </div>
+      <div class="boxedContent">
+      {{#events}}
+        {{>events}}
+      {{/events}}
       </div>
-    </div>
-  {{#if extends}}
-    <div class="events col dw100">
-      <div class="boxed">
-        <h2>Inherited Events</h2>
-
-        <div class="boxedContent">
+      {{#if extends}}
+      <h2 class="inheritedHeader">Inherited</h2>
+      <div class="boxedContent">
         {{#events}}
           {{>inheritedEvents}}
         {{/events}}
-        </div>
       </div>
+      {{/if}}
     </div>
-  {{/if}}
+  </div>
   {{/if}}
 
   {{#if methods}}
-    <div class="methods col dw100">
-      <div class="boxed">
-        <h2>Methods</h2>
+  <div class="methods col dw100">
+    <div class="boxed">
+      <h2>Methods</h2>
 
-        <div class="boxedContent">
-        {{#methods}}
-          {{>method}}
-        {{/methods}}
-        </div>
+      <div class="boxedContent">
+      {{#methods}}
+        {{>method}}
+      {{/methods}}
       </div>
-    </div>
-  {{#if extends}}
-    <div class="methods col dw100">
-      <div class="boxed">
-        <h2>Inherited Methods</h2>
-
-        <div class="boxedContent">
+      {{#if extends}}
+      <h2 class="inheritedHeader">Inherited</h2>
+      <div class="boxedContent">
         {{#methods}}
           {{>inheritedMethod}}
         {{/methods}}
-        </div>
       </div>
+      {{/if}}
     </div>
-  {{/if}}
+  </div>
   {{/if}}
 </div>

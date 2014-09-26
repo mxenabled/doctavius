@@ -25,7 +25,6 @@
       <th>Name</th>
       <th>Type</th>
       <th>Description</th>
-      <th>Properties</th>
     </thead>
     <tbody>
     {{#params}}
@@ -40,19 +39,6 @@
 
         <td>
         {{{description}}}
-        </td>
-
-        <td>
-          {{#if props}}
-          <ul>
-          {{#props}}
-              <li>
-                {{name}} <em>&lt;{{#crossLink type}}{{/crossLink}}&gt;</em>
-                <div>{{{description}}}</div>
-              </li>
-          {{/props}}
-          </ul>
-          {{/if}}
         </td>
       </tr>
     {{/params}}

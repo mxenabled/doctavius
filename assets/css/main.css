@@ -112,8 +112,8 @@ table {
     background: #f7f7f7;
   }
   table td, table th {
-    padding: 1em;
-    min-width: 10em;
+    padding: 10px;
+    min-width: 120px;
     border: 1px solid #f0f0f0;
     word-wrap: break-word;
   }
@@ -176,6 +176,16 @@ table {
     border-bottom: 1px solid #DEE5E7;
     position: relative;
   }
+  .boxed .inheritedHeader {
+    border-top: 2px solid #DEE5E7; 
+  }
+  .boxed tr.inheritedHeader {
+    font-size: 20px;
+    border-top: 2px solid #DEE5E7; 
+  }
+  .boxed tr.inheritedHeader > td:first-child {
+    padding-left: 20px;
+  }
     .boxed h2 + table {
       margin-top: -1px;
     }
@@ -187,10 +197,10 @@ table {
       margin: auto;
     }
   .boxedContent {
-    padding: 30px;
+    padding: 0 30px 30px;
   }
   .boxedContent table {
-    margin-bottom: 30px;
+    margin-top: 30px;
   }
 
 
@@ -527,7 +537,7 @@ footer {
 
 /* Methods */
 .method {
-  margin-bottom: 30px;
+  padding: 30px 0;
   border-bottom: 1px solid #f5f5f5;
 }
   .method:last-child {
@@ -540,10 +550,7 @@ footer {
     line-height: 1.5em;
     color: #999;
   }
-  .methodName {
-    margin-bottom: 30px;
-  }
-
+  
 .type {
   font-size: 12px;
   background: #222;
@@ -565,8 +572,12 @@ footer {
 }
 
 /* Returns */
-.returns {
-  margin-bottom: 30px;
+.returns h5 {
+  display: inline-block;
+  margin: 2em 1em 0 0;
+}
+.returns p {
+  display: inline-block;
 }
 
 /* Example */

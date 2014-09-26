@@ -2,12 +2,22 @@
 <tr>
   <td>
     <strong>{{name}}</strong>
-    {{#if required}}<br/><span class="required"></span>{{/if}}
-    {{#if deprecated}}<br/><span class="deprecatedFlag"></span>{{/if}}
+    {{#if overwritten_from}}
+    <a href="{{crossLinkRaw overwritten_from.class}}#attribute_{{name}}">({{overwritten_from.class}})</a>
+    {{/if}}
+    {{#if required}}<br/>
+    <span class="required"></span>
+    {{/if}}
+    {{#if static}}
+    <span class="fa fa-bolt" title="static"></span>
+    {{/if}}
+    {{#if deprecated}}
+    <span class="fa fa-exclamation-circle" title="deprecated"></span>
+    {{/if}}
   </td>
 
   <td>
-    {{default}}
+  {{{default}}}
   </td>
 
   <td>

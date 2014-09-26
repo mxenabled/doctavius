@@ -3,7 +3,7 @@
   <div class="methodName">
     <!-- NAME -->
     <h3>
-      {{name}}
+      {{#crossLink extended_from}}{{/crossLink}}: <a href="{{crossLinkRaw extended_from}}#method_{{name}}">{{name}}</a>
       <span class="params">{{paramsList}}</span>
       {{#if type}}
         <span class="type">{{#crossLink type}}{{/crossLink}}</span>
@@ -15,7 +15,6 @@
     </h3>
 
     <!-- DESCRIPTION -->
-    <em>{{#crossLink extended_from}}{{/crossLink}}</em>
     <p>{{{methodDescription}}}</p>
   </div>
 
@@ -26,7 +25,6 @@
       <th>Name</th>
       <th>Type</th>
       <th>Description</th>
-      <th>Properties</th>
     </thead>
     <tbody>
     {{#params}}
@@ -42,19 +40,6 @@
         <td>
         {{{description}}}
         </td>
-
-        <td>
-          {{#if props}}
-          <ul>
-          {{#props}}
-              <li>
-                {{name}} <em>&lt;{{#crossLink type}}{{/crossLink}}&gt;</em>
-                <div>{{{description}}}</div>
-              </li>
-          {{/props}}
-          </ul>
-          {{/if}}
-        </td>
       </tr>
     {{/params}}
     </tbody>
@@ -66,7 +51,7 @@
   {{#return}}
   <div class="returns">
     <h5>Returns:</h5>
-    {{#if type}}&lt;{{#crossLink type}}{{/crossLink}}&gt; {{/if}}{{{description}}}
+    {{#if type}}{{#crossLink type}}{{/crossLink}}{{/if}}{{#if description}} - {{{description}}}{{/if}}
   </div>
   {{/return}}
   {{/if}}
