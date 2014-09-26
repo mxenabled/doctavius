@@ -51,7 +51,7 @@
   {{#return}}
   <div class="returns">
     <h5>Returns:</h5>
-    {{#if type}}{{#crossLink type}}{{/crossLink}}{{/if}}{{{description}}}
+    {{#if type}}{{#crossLink type}}{{/crossLink}}{{/if}}{{#if description}} - {{{description}}}{{/if}}
   </div>
   {{/return}}
   {{/if}}
