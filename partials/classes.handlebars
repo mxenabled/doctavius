@@ -16,21 +16,20 @@
   <div class="description">{{{classDescription}}}</div>
 
   <div class="meta">
-    {{#if uses}}
-      <div class="uses">
-        Uses
-        <ul class="inline commas">
-          {{#uses}}
-            <li><a href="{{.}}.html">{{.}}</a></li>
-          {{/uses}}
-        </ul>
-      </div>
-    {{/if}}
-
     <div class="extends">
       <span class="fa fa-expand"></span> {{#crossLink extends}}{{/crossLink}}
     </div>
 
+    {{#if uses}}
+      <div class="uses">
+        <ul class="inline commas">
+          {{#uses}}
+            <li><span class="fa fa-wrench"></span> <a href="{{.}}.html">{{.}}</a></li>
+          {{/uses}}
+        </ul>
+      </div>
+    {{/if}}
+    
     {{#if foundAt}}
       <div class="foundat">
         <a href="{{foundAt}}"><span class="fa fa-file"></span> `{{{file}}}`</a>
